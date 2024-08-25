@@ -1,3 +1,28 @@
 {
-  "hello": "hello world!"
+  "header": {
+    "name": "INVENTORY"
+  },
+  "navbar": {
+    "products": "Products",
+    "orders": "Orders",
+    "groups": "Groups",
+    "users": "Users",
+    "settings": "Settings"
+  },
+  "product": {
+    "label": "Type:",
+    "title": "Products",
+    "guaranteeFrom": "From",
+    "guaranteeTo": "To",
+    "new": "New",
+    "used": "Used"
+  },
+  "order": {
+    "title": "Orders",
+    "products": "Products",
+    "add": "Add Product",
+    "modalTitle": "Are you sure you want to delete the order?",
+    "modalCancel": "Cancel",
+    "modalConfirm": "Delete"
+  }
 }
