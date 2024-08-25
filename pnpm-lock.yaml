@@ -17,9 +17,6 @@ dependencies:
   msw:
     specifier: ^2.3.5
     version: 2.3.5(typescript@5.4.5)
-  pinia:
-    specifier: ^2.2.2
-    version: 2.2.2(typescript@5.4.5)(vue@3.4.38)
   radix-vue:
     specifier: ^1.9.4
     version: 1.9.4(vue@3.4.38)
@@ -4152,24 +4149,6 @@ packages:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
     dev: true
-
-  /pinia@2.2.2(typescript@5.4.5)(vue@3.4.38):
-    resolution: {integrity: sha512-ja2XqFWZC36mupU4z1ZzxeTApV7DOw44cV4dhQ9sGwun+N89v/XP7+j7q6TanS1u1tdbK4r+1BUx7heMaIdagA==}
-    peerDependencies:
-      '@vue/composition-api': ^1.4.0
-      typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.3.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      '@vue/devtools-api': 6.6.3
-      typescript: 5.4.5
-      vue: 3.4.38(typescript@5.4.5)
-      vue-demi: 0.14.10(vue@3.4.38)
-    dev: false
 
   /pirates@4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
