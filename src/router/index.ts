@@ -1,10 +1,11 @@
 import {
   type RouteRecordInfo,
   type RouteRecordRaw,
-  createMemoryHistory,
   createRouter,
+  createWebHistory,
 } from 'vue-router'
 import ProductsPage from '@/pages/ProductsPage.vue'
+import OrdersPage from '@/pages/OrdersPage.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -12,13 +13,25 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     component: ProductsPage,
   },
+  {
+    name: 'Orders',
+    path: '/orders',
+    component: OrdersPage,
+  },
 ]
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })
 
 export interface RouteNamedMap {
   Products: RouteRecordInfo<'Products', '/'>
+  Orders: RouteRecordInfo<'Orders', '/orders'>
+}
+
+declare module 'vue-router' {
+  interface TypesConfig {
+    RouteNamedMap: RouteNamedMap
+  }
 }
