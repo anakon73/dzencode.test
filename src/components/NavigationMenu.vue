@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Settings, User } from 'lucide-vue-next'
 import { cn } from '@/utils'
+import { t } from '@/i18n'
 </script>
 
 <template>
@@ -12,9 +13,11 @@ import { cn } from '@/utils'
   >
     <div class="relative">
       <User class="size-20 rounded-full bg-[#6CA533] text-white" />
-      <Settings
-        class="absolute -bottom-2 -right-2 size-8 rounded-full bg-white p-2 shadow-lg"
-      />
+      <button class="absolute -bottom-2 -right-2">
+        <Settings
+          class="size-8 rounded-full bg-white p-2 shadow-lg"
+        />
+      </button>
     </div>
     <div class="flex flex-col items-center gap-3 text-lg font-semibold text-gray-500">
       <RouterLink
@@ -22,7 +25,7 @@ import { cn } from '@/utils'
         :to="{ name: 'Products' }"
       >
         <p :class="cn(isActive && 'font-bold underline')">
-          {{ $t('navbar.products') }}
+          {{ t('navbar.products') }}
         </p>
       </RouterLink>
       <RouterLink
@@ -30,12 +33,18 @@ import { cn } from '@/utils'
         :to="{ name: 'Orders' }"
       >
         <p :class="cn(isActive && 'font-bold underline')">
-          {{ $t('navbar.orders') }}
+          {{ t('navbar.orders') }}
         </p>
       </RouterLink>
-      <p>{{ $t('navbar.groups') }}</p>
-      <p>{{ $t('navbar.users') }}</p>
-      <p>{{ $t('navbar.settings') }}</p>
+      <p class="cursor-pointer">
+        {{ t('navbar.groups') }}
+      </p>
+      <p class="cursor-pointer">
+        {{ t('navbar.users') }}
+      </p>
+      <p class="cursor-pointer">
+        {{ t('navbar.settings') }}
+      </p>
     </div>
   </div>
 </template>

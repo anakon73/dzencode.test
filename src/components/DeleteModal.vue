@@ -9,6 +9,7 @@ import {
   AlertDialogTitle,
 } from 'radix-vue'
 import type { Order } from '@/types'
+import { t } from '@/i18n'
 
 interface Props {
   open: boolean
@@ -45,7 +46,7 @@ defineEmits<{ close: [], delete: [] }>()
           <X class="size-5 text-gray-500" />
         </AlertDialogCancel>
         <AlertDialogTitle class="mb-5 px-6 pt-6 text-2xl">
-          {{ $t('order.modalTitle') }}
+          {{ t('order.modalTitle') }}
         </AlertDialogTitle>
         <div>
           <div
@@ -59,7 +60,7 @@ defineEmits<{ close: [], delete: [] }>()
               :alt="`${product.title} photo`"
             >
             <p>
-              {{ product.title }}
+              {{ t(product.title) }}
             </p>
           </div>
         </div>
@@ -70,13 +71,13 @@ defineEmits<{ close: [], delete: [] }>()
           "
         >
           <button @click.stop="$emit('close')">
-            {{ $t('order.modalCancel') }}
+            {{ t('order.modalCancel') }}
           </button>
           <button
             class="flex items-center gap-2 rounded-[20px] bg-white px-8 py-2 text-red-600"
           >
             <Trash2 class="size-4" />
-            <p>{{ $t('order.modalConfirm') }}</p>
+            <p>{{ t('order.modalConfirm') }}</p>
           </button>
         </div>
       </AlertDialogContent>

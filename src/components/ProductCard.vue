@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { cn } from '@/utils'
+import { t } from '@/i18n'
 
 interface Props {
   photo: string
@@ -25,11 +26,11 @@ defineProps<Props>()
     </p>
     <div class="w-1/6">
       <p>
-        <span class="inline-block w-12">{{ $t('product.guaranteeFrom') }}</span>
+        <span class="inline-block w-12">{{ t('product.guaranteeFrom') }}</span>
         <span>{{ new Date(guarantee.start).toLocaleDateString("en-Us") }}</span>
       </p>
       <p>
-        <span class="inline-block w-12">{{ $t('product.guaranteeTo') }}</span>
+        <span class="inline-block w-12">{{ t('product.guaranteeTo') }}</span>
         <span>{{ new Date(guarantee.end).toLocaleDateString("en-Us") }}</span>
       </p>
     </div>
@@ -39,7 +40,7 @@ defineProps<Props>()
         isNew && 'text-green-500',
       )"
     >
-      {{ isNew ? $t('product.new') : $t('product.used') }}
+      {{ isNew ? t('product.new') : t('product.used') }}
     </p>
     <div class="w-1/6">
       <p

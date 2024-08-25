@@ -5,6 +5,7 @@ import { useProducts } from '@/api/useProducts'
 import { useOrders } from '@/api/useOrders'
 import ProductCard from '@/components/ProductCard.vue'
 import SelectType from '@/components/SelectType.vue'
+import { t } from '@/i18n'
 
 const { data: products } = useProducts()
 const { data: orders } = useOrders()
@@ -37,7 +38,7 @@ const productWithOrderAndFilter = computed(() => {
   <div>
     <div class="mb-5 flex items-center gap-10">
       <div class="text-4xl font-bold text-gray-700">
-        {{ $t('product.title') }} / {{ products?.length }}
+        {{ t('product.title') }} / {{ products?.length }}
       </div>
       <SelectType
         :selected-type="selectedType"

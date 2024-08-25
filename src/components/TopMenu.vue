@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Clock, User } from 'lucide-vue-next'
 import { useCurrentTime } from '@/utils'
+import { t } from '@/i18n'
 
 const { currentTime } = useCurrentTime()
 </script>
@@ -11,12 +12,12 @@ const { currentTime } = useCurrentTime()
       class="mx-auto flex max-w-[1440px] items-center justify-between border-gray-200 p-5"
     >
       <div class="flex items-center gap-10">
-        <div class="flex items-center gap-2">
+        <button class="flex items-center gap-2">
           <User class="rounded-full bg-[#6CA533] text-white" />
           <span class="text-lg font-bold tracking-wide text-[#6CA533]">
-            {{ $t('header.name') }}
+            {{ t('header.name') }}
           </span>
-        </div>
+        </button>
         <input
           type="text"
           placeholder="Поиск"

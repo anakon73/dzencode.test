@@ -14,6 +14,7 @@ import {
 } from 'radix-vue'
 import { ChevronDown } from 'lucide-vue-next'
 import type { ProductTypes } from '@/types'
+import { t } from '@/i18n'
 
 defineProps<{ selectedType: ProductTypes }>()
 
@@ -32,7 +33,7 @@ const productTypesArray = [
 
 <template>
   <div>
-    <label class="mr-2">{{ $t('product.label') }}</label>
+    <label class="mr-2">{{ t('product.label') }}</label>
     <SelectRoot
       :model-value="selectedType"
       @update:model-value="$emit('changeType', $event as ProductTypes)"

@@ -2,6 +2,7 @@
 import { computed, toRefs } from 'vue'
 import { ChevronRight, Logs, Trash2 } from 'lucide-vue-next'
 import type { Product } from '@/types'
+import { t } from '@/i18n'
 
 interface Props {
   title: string
@@ -47,7 +48,7 @@ const totalByCurrency = computed(() => {
       <div class="w-1/6">
         <p>{{ products.length }}</p>
         <p class="text-xs text-gray-500">
-          {{ $t('order.products') }}
+          {{ t('order.products') }}
         </p>
       </div>
       <div class="w-1/6">

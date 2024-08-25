@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Plus, Trash2, X } from 'lucide-vue-next'
 import type { Product } from '@/types'
+import { t } from '@/i18n'
 
 interface Props {
   title: string
@@ -26,7 +27,7 @@ defineEmits<{ unselectOrder: [] }>()
     <button class="mb-2 flex items-center gap-1">
       <Plus class="size-6 rounded-full bg-lime-500 p-1 text-white" />
       <p class="text-sm text-lime-500">
-        {{ $t('order.add') }}
+        {{ t('order.add') }}
       </p>
     </button>
     <div class="-mx-8">

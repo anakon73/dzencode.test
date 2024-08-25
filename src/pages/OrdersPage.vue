@@ -6,6 +6,7 @@ import OrderCard from '@/components/OrderCard.vue'
 import DeleteModal from '@/components/DeleteModal.vue'
 import type { Order } from '@/types'
 import { cn } from '@/utils'
+import { t } from '@/i18n'
 
 const { data: orders } = useOrders()
 
@@ -28,7 +29,7 @@ function deleteOrder(order: Order) {
   />
   <div>
     <div class="mb-5 text-4xl font-bold text-gray-700">
-      {{ $t('order.title') }} / {{ orders?.length }}
+      {{ t('order.title') }} / {{ orders?.length }}
     </div>
     <div :class="cn(selectedOrder && 'grid grid-cols-[1fr_2fr] gap-10')">
       <div class="flex w-full flex-col gap-5">
