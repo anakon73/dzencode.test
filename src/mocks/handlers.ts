@@ -1,18 +1,12 @@
 import { HttpResponse, http } from 'msw'
+import products from '@/api/products.db'
+import orders from '@/api/orders.db'
 
 export const handlers = [
-  http.get('/users', () => {
-    return HttpResponse.json([
-      {
-        id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d',
-        firstName: 'John',
-        lastName: 'Maverick',
-      },
-      {
-        id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3e',
-        firstName: 'Kar',
-        lastName: 'Marx',
-      },
-    ])
+  http.get('/products', () => {
+    return HttpResponse.json(products)
+  }),
+  http.get('/orders', () => {
+    return HttpResponse.json(orders)
   }),
 ]
