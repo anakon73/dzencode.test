@@ -1,0 +1,32 @@
+{
+  "header": {
+    "name": "INVENTORY"
+  },
+  "navbar": {
+    "products": "Продукти",
+    "orders": "Замовлення",
+    "groups": "Групи",
+    "users": "Користувачі",
+    "settings": "Налаштування",
+    "languages": {
+      "ua": "Ukrainian",
+      "eng": "English"
+    }
+  },
+  "product": {
+    "label": "Тип:",
+    "title": "Продукти",
+    "guaranteeFrom": "Від",
+    "guaranteeTo": "До",
+    "new": "Новий",
+    "used": "Використаний"
+  },
+  "order": {
+    "title": "Замовлення",
+    "products": "Продукти",
+    "add": "Додати продукт",
+    "modalTitle": "Ви впевнені, що хочете видалити замовлення?",
+    "modalCancel": "Скасувати",
+    "modalConfirm": "Видалити"
+  }
+}
