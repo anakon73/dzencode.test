@@ -6,6 +6,7 @@ import {
 } from 'vue-router'
 import ProductsPage from '@/pages/ProductsPage.vue'
 import OrdersPage from '@/pages/OrdersPage.vue'
+import NotFound from '@/pages/NotFound.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -18,6 +19,11 @@ const routes: RouteRecordRaw[] = [
     path: '/orders',
     component: OrdersPage,
   },
+  {
+    name: 'NotFound',
+    path: '/:pathMatch(.*)*',
+    component: NotFound,
+  },
 ]
 
 export const router = createRouter({
@@ -28,6 +34,7 @@ export const router = createRouter({
 export interface RouteNamedMap {
   Products: RouteRecordInfo<'Products', '/'>
   Orders: RouteRecordInfo<'Orders', '/orders'>
+  NotFound: RouteRecordInfo<'NotFound', '/:pathMatch(.*)*'>
 }
 
 declare module 'vue-router' {
